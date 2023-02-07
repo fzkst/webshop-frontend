@@ -8,6 +8,7 @@ import Cards from './layouts/Cards'
 
 
 import './layouts/layouts.css'
+import NepszeruTermekek from './layouts/NepszeruTermekek'
 
 
 const Home = () => {
@@ -16,7 +17,7 @@ const Home = () => {
       <Navbar/>
       <Carousel/>
       <Cards/>
-    
+      <NepszeruTermekek/>
       <Footer/>
     </div>
   )

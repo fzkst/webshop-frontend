@@ -1,12 +1,5 @@
 import { useEffect, useState } from "react";
-import { Virtual } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import IphoneCard from '../components/IphoneCard';
-import SwiperCore, { Pagination, Navigation, Manipulation } from "swiper"; 
-SwiperCore.use([Pagination, Navigation, Manipulation]);
-
-
-
 
 
 function NepszeruTermekek() {
@@ -50,27 +43,11 @@ function NepszeruTermekek() {
     />  
   }
 
-
   return (
     <div className="container mb-5">
         <h3 className="text-center mt-5">Kiemelt termékek </h3>
         <div className="row">
-        <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination,]}
-      spaceBetween={1}
-      slidesPerView={3}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-    >
-      {kiemeltLista.map((item, index) => (
-        <SwiperSlide key={index}>{item}</SwiperSlide>
-      ))}
-    
-    </Swiper>       
+          {kiemeltLista}
         </div>      
     </div>
   )
